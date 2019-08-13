@@ -4,24 +4,12 @@ let column;
 let row;
 let color;
 var defaultColor = "purple";
-//Listen for window load
-/*
-window.addEventListener("load", startup, false);
-function startup() {
-        colorWell = document.querySelector("#pick");
-        colorWell.value = defaultColor;
-        colorWell.addEventListener("input", updateFirst, false);
-        colorWell.select();
-      }
-
-function setColor(event) {
-    color = event;
-  }*/
 //Define number of columns and grids
 let fraction;   
 // Function that builds grid and decides number of squares per side
 function buildGrid(sides) {
     $("#container").empty(); 
+    // Design hover effect
     if (defaultColor == "purple") {  
     var css = "#container > *:hover, #container > *:active { background: #553c8b; transition:0s;}";
     }
@@ -56,6 +44,7 @@ buildGrid(80)
 // Create new grid depending on squares per side
 function render() {  
     let squares = Number(prompt("Decide how many squares you want on each side of the grid.")) 
+    //Make sure input is numeric
     if((!isNaN(parseFloat(squares)) && isFinite(squares)) == false){
         alert("Please only enter numeric characters")
       }  
@@ -82,6 +71,7 @@ function styleIt() {
     //Make button click cause return to classic mode
     $("#blackboard").attr("onclick","revert()");
 }
+// Revert to Classic mode
 function revert() {
     defaultColor = "purple";
     buildGrid(previous)
