@@ -7,13 +7,16 @@
         <title>Etch-a-Sketch</title>
     </head>
     <body>
+            <h1 hidden id="titles">Black Board</h1>
+            <h1 id="descript">Digital Sketchpad</h1>
         <div class="grid">
             <!-- Change sketch color-->
-            <button id="color-holder">Color:
-<input type="color" value="#553c8b" id="pick"></button>
-<button id="create" onclick="render()">Change Trait Thickness</button>
+            <!--<button id="color-holder">Color:
+<input type="color" value="#553c8b" id="pick"></button> -->
+<button id="create" onclick="render()">Change Number of Squares per side</button>
 <button id="eraser">Erase</button>
-<a id="github" href="https://github.com/Uzay-G/Etch-a-Sketch" target="_blank"><img src="githublogo.png"></a>
+<button id="blackboard" onclick="styleIt()">Black Board</button>
+<a id="github" href="https://github.com/Uzay-G/Etch-a-Sketch" target="_blank"><img width="38px"src="githublogo.svg"></a>
         </div>
 <div id="container">
 </div>

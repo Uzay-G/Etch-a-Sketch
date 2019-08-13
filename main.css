@@ -3,36 +3,41 @@
     height: 90%;
     margin-right: 4%;
     width: 90%;
-    margin-left: 4%;
+    left: 50%;
+    margin-left: -45%;
     position: absolute;
-    bottom: 10px;
+    bottom: 7px;
     display: grid;
     margin-top: 20px;
     background: #ffeafe;
     grid-template: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr / 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr
 }
+/*Buttons grid*/
 .grid {
     display: grid;
+    margin-left: 15px;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr;
     align-items: center;
 }
 #container > * {
     transition:0s 180s;
+    border: 1px solid rgba(
+        0, 0, 0, 0.2);
 
 }
-/* Color grid divs on hover */
-#container > *:hover {
-    background: #553c8b;
-    transition:0s;
+#blackboard {
+    margin-right: 70px;
 }
+/* logo */
 #github {
-    padding: 12px;
+    padding: 0;
     position: absolute;
     top: 50%;
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
 }
+/*style buttons */
 button {
     background: none;
     border-radius: 5px;
@@ -49,4 +54,38 @@ body {
     background: #ccc1ff;
     margin: 0;
     padding: 0;
+}
+/* blackboard title */
+#titles {
+    color: white;
+    position: absolute;
+    left: 80px;
+    top: 550px;
+    z-index: 99;
+    font-family: "Montserrat", sans-serif;
+}
+#descript {
+    position: absolute;
+    left: 80px;
+    top: 550px;
+    z-index: 99;
+    font-family: "Montserrat", sans-serif;
+
+}
+/*Basic responsibility for phone */
+@media screen and (max-width: 450px) {
+    #github {display: none;}
+    #container {
+        bottom: 0px;
+    }
+    button {
+        font-size: 13px;
+    }
+    .grid {width: 100%}
+    #eraser {margin-top: -20px;}
+    #blackboard {margin-top: -10px}
+}
+/*Basic responsibility Ipad */
+@media screen and (max-width: 850px) {
+    #github{display: none;}
 }
